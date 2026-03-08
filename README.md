@@ -4,25 +4,22 @@
 
 ---
 
-## 📱 Screenshots
-
-### 👨‍🎓 Student Side
 | Login | Home | Registration |
 |-------|------|--------------|
-| ![Login](screenshots/login.png) | ![Home](screenshots/home.png) | ![Register](screenshots/registration.png) |
+| ![Login](Login_Page_Student.png) | ![Home](Student_DashBoard.png) | ![Register](Student_Registration_page.png) |
 
 | Raise Ticket | File Upload | Ticket Review |
 |-------------|-------------|---------------|
-| ![Ticket](screenshots/ticket_raise.png) | ![Upload](screenshots/file_upload.png) | ![Review](screenshots/ticket_review.png) |
+| ![Ticket](Ticket_Raise.png) | ![Upload](File_Upload_page.png) | ![Review](Ticket_Review_page.png) |
 
 | My Tickets | Chat List | Chat Screen |
 |-----------|-----------|-------------|
-| ![MyTickets](screenshots/my_tickets.png) | ![Chats](screenshots/chat_list.png) | ![Chat](screenshots/chat_screen.png) |
+| ![MyTickets](All_Tickets_Raise_by_Student.png) | ![Chats](Chats_Screen.png) | ![Chat](Messages_Screen.png) |
 
 ### 👨‍🏫 Faculty Side
 | Dashboard | Analytics | Profile |
 |-----------|-----------|---------|
-| ![FDash](screenshots/faculty_dashboard.png) | ![Analytics](screenshots/faculty_analytics.png) | ![FProfile](screenshots/faculty_profile.png) |
+| ![FDash](Faculty_DashBoard.png) | ![Analytics](Faculty_Analytics_Page.png) | ![FProfile](Faculty-Profile_page.png) |
 
 ## ✨ Features
 
