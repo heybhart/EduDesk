@@ -1,0 +1,13 @@
+﻿This copy was prepared for GitHub upload.
+Removed/replaced sensitive values:
+- Firebase API key in app/google-services.json
+- Firebase service account secrets in app/src/main/assets/service_account.json
+- Supabase URL/key placeholders in app/src/main/java/com/example/myapplication/SupabaseManager.java
+Excluded from copy:
+- .git
+- .gradle
+- .gradle-local
+- .idea
+- build outputs
+- local.properties
+Before running the app, add your own configuration values back securely.

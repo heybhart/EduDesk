@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F8F5EF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfairdisplay_bold"
+            android:text="Create Announcement"
+            android:textColor="#1A2340"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="18dp"
+            android:fontFamily="@font/dmsans_regular"
+            android:text="Faculty side se quick official notice publish karne ke liye details bharo."
+            android:textColor="#777777"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/dmsans_semibold"
+            android:text="TITLE"
+            android:textColor="#1A2340"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etAnnouncementTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_input_ticket"
+            android:fontFamily="@font/dmsans_regular"
+            android:hint="Announcement title"
+            android:maxLength="90"
+            android:paddingHorizontal="14dp"
+            android:textColor="#1A2340"
+            android:textColorHint="#AAAAAA"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/dmsans_semibold"
+            android:text="CATEGORY"
+            android:textColor="#1A2340"
+            android:textSize="12sp" />
+
+        <Spinner
+            android:id="@+id/spinnerAnnouncementCategory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_spinner_ticket"
+            android:paddingHorizontal="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/dmsans_semibold"
+            android:text="AUDIENCE"
+            android:textColor="#1A2340"
+            android:textSize="12sp" />
+
+        <Spinner
+            android:id="@+id/spinnerAnnouncementAudience"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_spinner_ticket"
+            android:paddingHorizontal="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/dmsans_semibold"
+            android:text="PRIORITY"
+            android:textColor="#1A2340"
+            android:textSize="12sp" />
+
+        <Spinner
+            android:id="@+id/spinnerAnnouncementPriority"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_spinner_ticket"
+            android:paddingHorizontal="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/dmsans_semibold"
+            android:text="DETAILS"
+            android:textColor="#1A2340"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etAnnouncementBody"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_input_ticket"
+            android:fontFamily="@font/dmsans_regular"
+            android:gravity="top"
+            android:hint="Write the announcement details..."
+            android:inputType="textMultiLine"
+            android:maxLength="500"
+            android:padding="14dp"
+            android:textColor="#1A2340"
+            android:textColorHint="#AAAAAA"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelAnnouncement"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_btn_secondary"
+                android:fontFamily="@font/dmsans_semibold"
+                android:minWidth="0dp"
+                android:paddingHorizontal="18dp"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="#1A2340"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnPostAnnouncement"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_btn_primary"
+                android:fontFamily="@font/dmsans_semibold"
+                android:minWidth="0dp"
+                android:paddingHorizontal="18dp"
+                android:text="Post"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

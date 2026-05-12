@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Checked = Gold text -->
+    <item android:state_checked="true" android:color="#C9A84C"/>
+    <!-- Pressed = Gold text -->
+    <item android:state_pressed="true" android:color="#C9A84C"/>
+    <!-- Default = Navy text -->
+    <item android:color="#1A2340"/>
+</selector>

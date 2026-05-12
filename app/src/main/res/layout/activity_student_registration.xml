@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0EEE8">
+
+    <!-- ===== HEADER ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:gravity="center_vertical">
+
+        <!-- Logo Icon Box -->
+        <FrameLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/college_helpdesk_logo">
+        </FrameLayout>
+
+        <!-- University Name -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="College "
+                android:textColor="#1A2340"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="serif" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HelpDesk"
+                android:textColor="#C9A84C"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="serif" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Tagline -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EXCELLENCE IN EDUCATION"
+        android:textColor="#888880"
+        android:textSize="11sp"
+        android:letterSpacing="0.15"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- ===== STEP INDICATOR ===== -->
+    <LinearLayout
+        android:id="@+id/stepIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        android:layout_marginBottom="20dp">
+
+        <!-- Step 1 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <FrameLayout
+                android:id="@+id/step1Circle"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_step_active">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="1"
+                    android:textColor="@color/gold"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+            <TextView
+                android:id="@+id/step1Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PERSONAL"
+                android:textColor="#1A2340"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Line 1-2 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#CCCCCC"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Step 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <FrameLayout
+                android:id="@+id/step2Circle"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_step_inactive">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="2"
+                    android:textColor="#AAAAAA"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+            <TextView
+                android:id="@+id/step2Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACADEMIC"
+                android:textColor="#AAAAAA"
+                android:textSize="9sp"
+                android:letterSpacing="0.1"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ===== VIEW FLIPPER (Main Content) ===== -->
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp">
+
+        <!-- ==================== STEP 1: PERSONAL INFO ==================== -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="24dp"
+                android:elevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Card Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Registration"
+                    android:textColor="#1A2340"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step 1: Tell us about yourself"
+                    android:textColor="#888880"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- FULL NAME -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FULL NAME"
+                    android:textColor="#1A2340"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Enter your first name"
+                    android:textColorHint="#BBBBBB"
+                    android:textColor="#1A2340"
+                    android:textSize="15sp"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/bg_input_field"
+                    android:inputType="textPersonName"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- SURNAME -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SURNAME"
+                    android:textColor="#1A2340"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etSurname"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Enter your last name"
+                    android:textColorHint="#BBBBBB"
+                    android:textColor="#1A2340"
+                    android:textSize="15sp"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/bg_input_field"
+                    android:inputType="textPersonName"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- PRN NUMBER -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRN NUMBER"
+                    android:textColor="#1A2340"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etPrn"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Enter your PRN number"
+                    android:textColorHint="#BBBBBB"
+                    android:textColor="#1A2340"
+                    android:textSize="15sp"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/bg_input_field"
+                    android:inputType="number"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- GMAIL -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GMAIL ADDRESS"
+                    android:textColor="#1A2340"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Enter your Gmail address"
+                    android:textColorHint="#BBBBBB"
+                    android:textColor="#1A2340"
+                    android:textSize="15sp"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/bg_input_field"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="28dp" />
+
+                <!-- NEXT STEP BUTTON -->
+                <Button
+                    android:id="@+id/btnNextStep"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="NEXT STEP  →"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:backgroundTint="@color/navy"
+                    android:textColor="@color/gold"/>
+
+                <!-- Sign In -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Already registered? "
+                        android:textColor="#888880"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:id="@+id/tvSignIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign In"
+                        android:textColor="#1A2340"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ==================== STEP 2: ACADEMIC INFO ==================== -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="24dp"
+                android:elevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Card Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Registration"
+                    android:textColor="#1A2340"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step 2: Academic Details"
+                    android:textColor="#888880"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- CONTACT NUMBER -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONTACT NUMBER"
+                    android:textColor="#1A2340"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Enter your contact number"
+                    android:textColorHint="#BBBBBB"
+                    android:textColor="#1A2340"
+                    android:textSize="15sp"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/bg_input_field"
+                    android:inputType="phone"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- GENDER -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GENDER"
+                    android:textColor="#1A2340"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioGroup
+                    android:id="@+id/rgGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <RadioButton
+                        android:id="@+id/rbMale"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="♂ Male"
+                        android:textColor="#1A2340"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:background="@drawable/bg_gender_option"
+                        android:layout_marginEnd="8dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbFemale"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="♀ Female"
+                        android:textColor="#1A2340"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:background="@drawable/bg_gender_option"
+                        android:layout_marginEnd="8dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbOther"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Other"
+                        android:textColor="#1A2340"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:background="@drawable/bg_gender_option" />
+
+                </RadioGroup>
+
+                <!-- COURSE / DEPARTMENT -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COURSE / DEPARTMENT"
+                    android:textColor="#1A2340"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_spinner_field"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:spinnerMode="dropdown" />
+
+                <!-- YEAR -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YEAR"
+                    android:textColor="#1A2340"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioGroup
+                    android:id="@+id/rgYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <RadioButton
+                        android:id="@+id/rbFY"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="FY"
+                        android:textColor="#1A2340"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:background="@drawable/bg_gender_option"
+                        android:layout_marginEnd="6dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbSY"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="SY"
+                        android:textColor="#1A2340"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:background="@drawable/bg_gender_option"
+                        android:layout_marginEnd="6dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbTY"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="TY"
+                        android:textColor="#1A2340"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:background="@drawable/bg_gender_option"
+                        android:layout_marginEnd="6dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbFinal"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Final"
+                        android:textColor="#1A2340"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:background="@drawable/bg_gender_option" />
+
+                </RadioGroup>
+
+                <!-- COLLEGE NAME -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COLLEGE NAME"
+                    android:textColor="#1A2340"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etCollege"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Enter your college name"
+                    android:textColorHint="#BBBBBB"
+                    android:textColor="#1A2340"
+                    android:textSize="15sp"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/bg_input_field"
+                    android:inputType="textCapWords"
+                    android:layout_marginBottom="28dp" />
+
+                <!-- PREVIOUS + SUBMIT BUTTONS -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <Button
+                        android:id="@+id/btnPrevious"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="← BACK"
+
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"
+                        android:backgroundTint="@color/navy"
+                        android:textColor="@color/gold"
+                        android:layout_marginEnd="10dp" />
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="SUBMIT ✓"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"
+                        android:backgroundTint="@color/navy"
+                        android:textColor="@color/gold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </ViewFlipper>
+
+</LinearLayout>

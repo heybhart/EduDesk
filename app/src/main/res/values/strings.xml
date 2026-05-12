@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">College HelpDesk</string>
+    <string name="tagline">"Your queries, resolved with care."</string>
+    <string name="welcome_back">WELCOME BACK</string>
+    <string name="tab_student">Student</string>
+    <string name="tab_staff">Staff</string>
+    <string name="tab_admin">Admin</string>
+    <string name="hint_email">College Email ID</string>
+    <string name="hint_password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="btn_login">Login  →</string>
+    <string name="or">OR</string>
+    <string name="btn_sso">Login with College SSO</string>
+    <string name="trouble_text">Having trouble? </string>
+    <string name="contact_support">Contact IT Support</string>
+    <string name="copyright">© 2025 COLLEGE HELPDESK</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

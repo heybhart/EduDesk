@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F3EE"
+    android:orientation="vertical">
+
+    <!-- ===== TOP BAR ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#F5F3EE"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_back"
+            app:tint="#1A2340" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/playfairdisplay_bold"
+            android:text="Raise New Ticket"
+            android:textColor="#1A2340"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- NAVY LINE -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/navy" />
+
+    <!-- ===== VIEWFLIPPER - 2 pages ===== -->
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- ============================================================ -->
+        <!-- PAGE 1: DETAILS + FILE UPLOAD                                -->
+        <!-- ============================================================ -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F5F3EE">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="24dp">
+
+                <!-- STEP INDICATOR — Step 1 active -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- Step 1 Active -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/bg_step_ticket_active">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/dmsans_semibold"
+                                android:text="1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/dmsans_semibold"
+                            android:letterSpacing="0.1"
+                            android:text="DETAILS"
+                            android:textColor="#1A2340"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="6dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_weight="1"
+                        android:background="#CCCCCC" />
+
+
+                    <!-- Step 2 Inactive -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/bg_step_ticket_inactive">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/dmsans_regular"
+                                android:text="2"
+                                android:textColor="#AAAAAA"
+                                android:textSize="15sp" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/dmsans_regular"
+                            android:letterSpacing="0.1"
+                            android:text="REVIEW"
+                            android:textColor="#AAAAAA"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- TICKET SUBJECT -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/dmsans_semibold"
+                    android:letterSpacing="0.1"
+                    android:text="TICKET SUBJECT"
+                    android:textColor="#1A2340"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/etSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/bg_input_ticket"
+                    android:fontFamily="@font/dmsans_regular"
+                    android:hint="Briefly describe the issue..."
+                    android:inputType="text"
+                    android:paddingHorizontal="14dp"
+                    android:textColor="#1A2340"
+                    android:textColorHint="#CCCCCC"
+                    android:textSize="14sp" />
+
+
+
+                <!-- CATEGORY -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/dmsans_semibold"
+                    android:letterSpacing="0.1"
+                    android:text="CATEGORY"
+                    android:textColor="#1A2340"
+                    android:textSize="12sp" />
+
+                <!-- Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/catAcademics"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_category_selected"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_academics"
+                            app:tint="#1A2340" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/dmsans_regular"
+                            android:text="Academics"
+                            android:textColor="#1A2340"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catFees"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_category_normal"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_fees"
+                            app:tint="#1A2340" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/dmsans_regular"
+                            android:text="Fees"
+                            android:textColor="#1A2340"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/catHostel"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_category_normal"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_hostel"
+                            app:tint="#1A2340" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/dmsans_regular"
+                            android:text="Hostel"
+                            android:textColor="#1A2340"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catLibrary"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_category_normal"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_documents"
+                            app:tint="#1A2340" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/dmsans_regular"
+                            android:text="Document"
+                            android:textColor="#1A2340"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Row 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/catIT"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_category_normal"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_it_support"
+                            app:tint="#1A2340" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/dmsans_regular"
+                            android:text="IT Support"
+                            android:textColor="#1A2340"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/catDocuments"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_category_normal"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_others"
+                            app:tint="#1A2340" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/dmsans_regular"
+                            android:text="Others"
+                            android:textColor="#1A2340"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- PRIORITY LEVEL SECTION -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/dmsans_semibold"
+                    android:letterSpacing="0.1"
+                    android:text="PRIORITY LEVEL"
+                    android:textColor="#1A2340"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/priorityLow"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_priority_low_selected"
+                            android:fontFamily="@font/dmsans_medium"
+                            android:gravity="center"
+                            android:text="Low"
+                            android:textColor="#10B981"
+                            android:textSize="14sp"
+                            android:clickable="true"
+                            android:focusable="true" />
+
+                        <TextView
+                            android:id="@+id/priorityMedium"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_priority_unselected"
+                            android:fontFamily="@font/dmsans_medium"
+                            android:gravity="center"
+                            android:text="Medium"
+                            android:textColor="#6B7280"
+                            android:textSize="14sp"
+                            android:clickable="true"
+                            android:focusable="true" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/priorityHigh"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_priority_unselected"
+                        android:fontFamily="@font/dmsans_medium"
+                        android:gravity="center"
+                        android:text="High"
+                        android:textColor="#6B7280"
+                        android:textSize="14sp"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
+
+                <!-- DETAILED DESCRIPTION -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/dmsans_semibold"
+                    android:letterSpacing="0.1"
+                    android:text="DETAILED DESCRIPTION"
+                    android:textColor="#1A2340"
+                    android:textSize="12sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_input_ticket">
+
+                    <EditText
+                        android:id="@+id/etDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/dmsans_regular"
+                        android:gravity="top"
+                        android:hint="Please provide all relevant details..."
+                        android:inputType="textMultiLine"
+                        android:maxLength="500"
+                        android:padding="14dp"
+                        android:textColor="#1A2340"
+                        android:textColorHint="#CCCCCC"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvCharCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:fontFamily="@font/dmsans_regular"
+                        android:padding="10dp"
+                        android:text="0 / 500"
+                        android:textColor="#AAAAAA"
+                        android:textSize="11sp" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/dmsans_regular"
+                    android:text="Oxford academic precision is encouraged in your descriptions."
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <!-- FILE UPLOAD SECTION -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/playfairdisplay_bold"
+                    android:text="Upload Supporting Documents"
+                    android:textColor="#1A2340"
+                    android:textSize="16sp" />
+
+                <!-- Dashed Upload Box -->
+                <LinearLayout
+                    android:id="@+id/uploadBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_upload_box"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/uploadfilewrapper"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/bg_upload_icon_circle"
+                        android:clickable="true">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_upload"
+                            app:tint="#1A2340" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/dmsans_regular"
+                            android:text="Drag files here or "
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/dmsans_semibold"
+                            android:text="click to browse"
+                            android:textColor="#1A2340"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dmsans_regular"
+                        android:text="Supported formats: PDF, JPG, PNG, DOCX (Max 5MB)"
+                        android:textColor="#AAAAAA"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/uploadProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:max="100"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"/>
+
+
+                <!-- Uploaded Files -->
+                <TextView
+                    android:id="@+id/tvUploadedCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/playfairdisplay_bold"
+                    android:text="Uploaded Files (2)"
+                    android:textColor="#1A2340"
+                    android:textSize="15sp" />
+
+                <!--  UPLOADED Files Container  -->
+                <LinearLayout
+                    android:id="@+id/UploadedFilesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+                <!-- PROCEED BUTTON — Page 1 se Page 2 jao -->
+                <Button xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/btnProceed"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:backgroundTint="@color/navy"
+                    android:fontFamily="@font/dmsans_semibold"
+                    android:stateListAnimator="@null"
+                    android:text="Proceed to Review  →"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ============================================================ -->
+        <!-- PAGE 2: REVIEW                                               -->
+        <!-- ============================================================ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F0F2F5"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/reviewScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="24dp">
+
+                <!-- STEP INDICATOR — Step 1 done, Step 2 done, Step 3 active -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- Step 1 Done — Gold tick -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_step_done_gold">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/dmsans_semibold"
+                                android:text="✓"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/dmsans_semibold"
+                            android:letterSpacing="0.1"
+                            android:text="INFO"
+                            android:textColor="@color/gold"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <!-- Gold line -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_weight="1"
+                        android:background="@color/gold" />
+
+                    <!-- Step 2 Done — Gold tick -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_step_done_gold">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/dmsans_semibold"
+                                android:text="✓"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/dmsans_semibold"
+                            android:letterSpacing="0.1"
+                            android:text="DETAILS"
+                            android:textColor="@color/gold"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <!-- Gray line -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_weight="1"
+                        android:background="#CCCCCC" />
+
+                    <!-- Step 3 Active — Navy -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_step_ticket_active">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/dmsans_semibold"
+                                android:text="3"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/dmsans_semibold"
+                            android:letterSpacing="0.1"
+                            android:text="REVIEW"
+                            android:textColor="#1A2340"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- TICKET SUMMARY CARD -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_review_card"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Ticket Summary heading -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/playfairdisplay_bold"
+                        android:text="Ticket Summary"
+                        android:textColor="#1A2340"
+                        android:textSize="22sp" />
+
+                    <!-- SUBJECT -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:letterSpacing="0.1"
+                        android:text="SUBJECT"
+                        android:textColor="#AAAAAA"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvReviewSubject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:fontFamily="@font/playfairdisplay_bold"
+                        android:text="Grade Appeal"
+                        android:textColor="#1A2340"
+                        android:textSize="18sp" />
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="#EEEEEE" />
+
+                    <!-- CATEGORY + PRIORITY side by side -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/dmsans_semibold"
+                                android:letterSpacing="0.1"
+                                android:text="CATEGORY"
+                                android:textColor="#AAAAAA"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/tvReviewCategory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dmsans_semibold"
+                                android:text="Academics"
+                                android:textColor="#1A2340"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/dmsans_semibold"
+                                android:letterSpacing="0.1"
+                                android:text="PRIORITY"
+                                android:textColor="#AAAAAA"
+                                android:textSize="11sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+                                <!-- Dynamic dot -->
+                                <View
+                                    android:id="@+id/reviewPriorityDot"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:background="@drawable/dot_green" />
+
+                                <TextView
+                                    android:id="@+id/tvReviewPriority"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_semibold"
+                                    android:text="Low"
+                                    android:textColor="#1A2340"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="#EEEEEE" />
+
+                    <!-- DESCRIPTION -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:letterSpacing="0.1"
+                        android:text="DESCRIPTION"
+                        android:textColor="#AAAAAA"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvReviewDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dmsans_regular"
+                        android:lineSpacingMultiplier="1.4"
+                        android:text="I am requesting a formal review of my final grade for the Advanced Mathematics (MATH402) course. I believe there was an error in the..."
+                        android:textColor="#444444"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+<!--                Review File Conatiner        -->
+                <LinearLayout
+                    android:id="@+id/reviewFileContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+
+
+                </LinearLayout>
+
+                <!-- CONFIRM CHECKBOX -->
+                <LinearLayout
+                    android:id="@+id/confirm_chekbox_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbConfirm"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="12dp"
+                        android:button="@drawable/bg_checkbox"
+                        android:checked="true" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/dmsans_regular"
+                        android:lineSpacingMultiplier="1.4"
+                        android:text="I confirm all the above information is correct and I understand that providing false information may delay processing."
+                        android:textColor="#444444"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- SUBMIT TICKET BUTTON — Gold -->
+                <Button xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/btnSubmitTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:backgroundTint="@color/gold"
+                    android:fontFamily="@font/dmsans_semibold"
+                    android:stateListAnimator="@null"
+                    android:text="Submit Ticket  >"
+                    android:textColor="#1A2340"
+                    android:textSize="16sp"
+                    android:layout_marginTop="20dp"
+                    app:cornerRadius="10dp" />
+
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </ViewFlipper>
+
+</LinearLayout>

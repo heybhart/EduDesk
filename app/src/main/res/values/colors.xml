@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/colors.xml -->
+<resources>
+    <!-- ── PRIMARY PALETTE (from your design) ── -->
+    <color name="navy">#0F1F3D</color>
+    <color name="navy_mid">#1A2F55</color>
+    <color name="navy_light">#243660</color>
+
+    <color name="gold">#C9A84C</color>
+    <color name="gold_light">#E0BC6E</color>
+    <color name="gold_pale">#F5E9C8</color>
+
+    <color name="cream">#F5F0E8</color>
+    <color name="cream_dark">#EDE6D6</color>
+
+    <!-- ── NEUTRALS ── -->
+    <color name="white">#FFFFFF</color>
+    <color name="gray_100">#F2EDE4</color>
+    <color name="gray_200">#E0D9CE</color>
+    <color name="gray_400">#B8B0A2</color>
+    <color name="gray_500">#8A8275</color>
+    <color name="gray_700">#4A4438</color>
+
+    <!-- ── STATUS COLORS ── -->
+    <color name="red">#C0392B</color>
+    <color name="red_light">#FDECEA</color>
+    <color name="green">#1A6645</color>
+    <color name="green_light">#E4F2EA</color>
+    <color name="amber">#D4720A</color>
+    <color name="amber_light">#FEF3E2</color>
+    <color name="blue_light">#E8EEF8</color>
+
+    <!-- ── INPUT FIELD STROKE ── -->
+    <color name="input_stroke_default">#E0D9CE</color>
+    <color name="input_stroke_focused">#C9A84C</color>
+    <color name="input_stroke_error">#C0392B</color>
+</resources>

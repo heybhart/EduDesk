@@ -1,0 +1,29 @@
+﻿{
+  "project_info": {
+    "project_number": "998654764063",
+    "project_id": "collegehelpdeskproject",
+    "storage_bucket": "collegehelpdeskproject.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998654764063:android:348aca98579d551a94212a",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "YOUR_FIREBASE_WEB_API_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

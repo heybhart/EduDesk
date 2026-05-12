@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?><!-- activity_login.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy"
+    android:fillViewport="true"
+    tools:context=".LoginPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="38dp"
+        android:paddingBottom="32dp">
+
+        <!-- SHIELD LOGO -->
+        <FrameLayout
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/college_helpdesk_logo" />
+
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+        <!-- APP NAME -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/playfairdisplay_bold"
+            android:gravity="center"
+            android:letterSpacing="0.04"
+            android:text="College Helpdesk"
+            android:textColor="@color/gold"
+            android:textSize="28sp" />
+
+        <!-- TAGLINE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/dmsans_regular"
+            android:gravity="center"
+            android:text="Your queries, resolved with care."
+            android:textColor="#99FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+
+        <!-- FEATURE ICONS ROW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="28dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:cardBackgroundColor="#1AFFFFFF"
+                    app:cardCornerRadius="28dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_ticket"
+                        app:tint="@color/gold" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/dmsans_regular"
+                    android:gravity="center"
+                    android:letterSpacing="0.12"
+                    android:text="RAISE TICKETS"
+                    android:textColor="#66FFFFFF"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:cardBackgroundColor="#1AFFFFFF"
+                    app:cardCornerRadius="28dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_bolt"
+                        app:tint="@color/gold" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/dmsans_regular"
+                    android:gravity="center"
+                    android:letterSpacing="0.12"
+                    android:text="LIVE UPDATES"
+                    android:textColor="#66FFFFFF"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:cardBackgroundColor="#1AFFFFFF"
+                    app:cardCornerRadius="28dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_track"
+                        app:tint="@color/gold" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/dmsans_regular"
+                    android:gravity="center"
+                    android:letterSpacing="0.12"
+                    android:text="TRACK STATUS"
+                    android:textColor="#66FFFFFF"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- LOGIN CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/cream"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <!-- WELCOME BACK -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/playfairdisplay_bold"
+                    android:gravity="center"
+                    android:letterSpacing="0.12"
+                    android:text="WELCOME BACK"
+                    android:textColor="@color/navy"
+                    android:textSize="20sp" />
+
+                <!-- Gold divider -->
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@color/gold" />
+
+                <!-- ROLE TABS (Student + Staff only) -->
+                <LinearLayout
+                    android:id="@+id/roleTabContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/bg_tab_container"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/tabStudent"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_tab_active"
+                        android:fontFamily="@font/dmsans_semibold"
+                        android:gravity="center"
+                        android:text="Student"
+                        android:textColor="@color/gold"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tabStaff"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/dmsans_regular"
+                        android:gravity="center"
+                        android:text="Staff"
+                        android:textColor="@color/gray_500"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <!-- ══════════════════════
+                     VIEW FLIPPER
+                     Child 0 = Student
+                     Child 1 = Staff
+                ══════════════════════ -->
+                <ViewFlipper
+                    android:id="@+id/viewFlipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- ══════════════════════ -->
+                    <!-- CHILD 0 : STUDENT FORM -->
+                    <!-- ══════════════════════ -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- PRN FIELD -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/emailLayout"
+                            style="@style/InputFieldStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            app:boxBackgroundColor="@color/white"
+                            app:boxCornerRadiusBottomEnd="10dp"
+                            app:boxCornerRadiusBottomStart="10dp"
+                            app:boxCornerRadiusTopEnd="10dp"
+                            app:boxCornerRadiusTopStart="10dp"
+                            app:boxStrokeColor="@color/input_stroke_focused"
+                            app:boxStrokeWidth="1.5dp"
+                            app:startIconDrawable="@drawable/outline_person_24"
+                            app:startIconTint="@color/gray_400">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPrn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dmsans_regular"
+                                android:hint="PRN Number"
+                                android:inputType="number"
+                                android:paddingVertical="14dp"
+                                android:textColor="@color/gray_700"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- GENERATE OTP BUTTON -->
+                        <Button
+                            android:id="@+id/btnGenerateOtp"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="14dp"
+                            android:backgroundTint="@color/gold"
+                            android:fontFamily="@font/dmsans_semibold"
+                            android:stateListAnimator="@null"
+                            android:text="Generate OTP"
+                            android:textColor="@color/navy"
+                            android:textSize="14sp"
+                            app:cornerRadius="10dp" />
+
+                        <!-- OTP SECTION — pehle GONE rahega, OTP generate hone ke baad VISIBLE hoga -->
+                        <LinearLayout
+                            android:id="@+id/otpSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <!-- OTP sent message -->
+                            <TextView
+                                android:id="@+id/tvOtpSent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:fontFamily="@font/dmsans_regular"
+                                android:gravity="center"
+                                android:text="OTP sent to your registered Gmail!"
+                                android:textColor="#22A55B"
+                                android:textSize="12sp" />
+
+                            <!-- OTP INPUT FIELD -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/otpLayout"
+                                style="@style/InputFieldStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="14dp"
+                                app:boxBackgroundColor="@color/white"
+                                app:boxCornerRadiusBottomEnd="10dp"
+                                app:boxCornerRadiusBottomStart="10dp"
+                                app:boxCornerRadiusTopEnd="10dp"
+                                app:boxCornerRadiusTopStart="10dp"
+                                app:boxStrokeColor="@color/input_stroke_focused"
+                                app:boxStrokeWidth="1.5dp"
+                                app:counterEnabled="true"
+                                app:counterMaxLength="6"
+                                app:startIconDrawable="@drawable/ic_lock"
+                                app:startIconTint="@color/gray_400">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etOtp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_regular"
+                                    android:gravity="center"
+                                    android:hint="Enter 6-digit OTP"
+                                    android:inputType="numberPassword"
+                                    android:letterSpacing="0.3"
+                                    android:maxLength="6"
+                                    android:paddingVertical="14dp"
+                                    android:textColor="@color/gray_700"
+                                    android:textSize="18sp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <!-- RESEND OTP -->
+                            <TextView
+                                android:id="@+id/tvResendOtp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:fontFamily="@font/dmsans_semibold"
+                                android:gravity="end"
+                                android:text="Resend OTP"
+                                android:textColor="@color/gold"
+                                android:textSize="12sp" />
+
+                            <!-- VERIFY & LOGIN BUTTON -->
+                            <Button
+                                android:id="@+id/btnLogin"
+                                android:layout_width="match_parent"
+                                android:layout_height="52dp"
+                                android:backgroundTint="@color/navy"
+                                android:elevation="4dp"
+                                android:fontFamily="@font/dmsans_semibold"
+                                android:stateListAnimator="@null"
+                                android:text="Verify &amp; Login  →"
+                                android:textColor="@color/gold"
+                                android:textSize="15sp"
+                                app:cornerRadius="10dp" />
+                        </LinearLayout>
+
+                        <!-- OR DIVIDER -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="18dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/gray_200" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dmsans_regular"
+                                android:letterSpacing="0.1"
+                                android:paddingHorizontal="12dp"
+                                android:text="OR"
+                                android:textColor="@color/gray_400"
+                                android:textSize="11sp" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/gray_200" />
+                        </LinearLayout>
+
+                        <!-- CREATE STUDENT ACCOUNT -->
+                        <Button
+                            android:id="@+id/btnCreateStudent"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:backgroundTint="@color/navy"
+                            android:fontFamily="@font/dmsans_semibold"
+                            android:stateListAnimator="@null"
+                            android:strokeColor="@color/navy"
+                            android:text="Create Student Account"
+                            android:textColor="@color/gold"
+                            android:textSize="14sp"
+                            app:cornerRadius="10dp" />
+
+                    </LinearLayout>
+
+
+                    <!-- ══════════════════════ -->
+                    <!-- CHILD 1 : STAFF FORM -->
+                    <!-- ══════════════════════ -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- STAFF EMAIL -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/staffEmailLayout"
+                            style="@style/InputFieldStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            app:boxBackgroundColor="@color/white"
+                            app:boxCornerRadiusBottomEnd="10dp"
+                            app:boxCornerRadiusBottomStart="10dp"
+                            app:boxCornerRadiusTopEnd="10dp"
+                            app:boxCornerRadiusTopStart="10dp"
+                            app:boxStrokeColor="@color/input_stroke_focused"
+                            app:boxStrokeWidth="1.5dp"
+                            app:startIconDrawable="@drawable/ic_email"
+                            app:startIconTint="@color/gray_400">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etStaffEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dmsans_regular"
+                                android:hint="Staff Email ID"
+                                android:inputType="textEmailAddress"
+                                android:paddingVertical="14dp"
+                                android:textColor="@color/gray_700"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- STAFF PASSWORD -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/staffPasswordLayout"
+                            style="@style/InputFieldStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:boxBackgroundColor="@color/white"
+                            app:boxCornerRadiusBottomEnd="10dp"
+                            app:boxCornerRadiusBottomStart="10dp"
+                            app:boxCornerRadiusTopEnd="10dp"
+                            app:boxCornerRadiusTopStart="10dp"
+                            app:boxStrokeColor="@color/input_stroke_focused"
+                            app:boxStrokeWidth="1.5dp"
+                            app:endIconMode="password_toggle"
+                            app:endIconTint="@color/gray_400"
+                            app:startIconDrawable="@drawable/ic_lock"
+                            app:startIconTint="@color/gray_400">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etStaffPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dmsans_regular"
+                                android:hint="Password"
+                                android:inputType="textPassword"
+                                android:paddingVertical="14dp"
+                                android:textColor="@color/gray_700"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- STAFF FORGOT PASSWORD -->
+                        <TextView
+                            android:id="@+id/tvStaffForgotPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="20dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:fontFamily="@font/dmsans_semibold"
+                            android:gravity="end"
+                            android:text="Forgot Password?"
+                            android:textColor="@color/gold"
+                            android:textSize="12sp" />
+
+                        <!-- STAFF LOGIN -->
+                        <Button
+                            android:id="@+id/btnStaffLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:backgroundTint="@color/navy"
+                            android:elevation="4dp"
+                            android:fontFamily="@font/dmsans_semibold"
+                            android:stateListAnimator="@null"
+                            android:text="Staff Login  →"
+                            android:textColor="@color/gold"
+                            android:textSize="15sp"
+                            app:cornerRadius="10dp" />
+
+                        <!-- OR DIVIDER -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="18dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/gray_200" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dmsans_regular"
+                                android:letterSpacing="0.1"
+                                android:paddingHorizontal="12dp"
+                                android:text="OR"
+                                android:textColor="@color/gray_400"
+                                android:textSize="11sp" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/gray_200" />
+                        </LinearLayout>
+
+                        <!-- CREATE FACULTY ACCOUNT -->
+                        <Button
+                            android:id="@+id/btnCreateFaculty"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:backgroundTint="@color/cream"
+                            android:fontFamily="@font/dmsans_semibold"
+                            android:stateListAnimator="@null"
+                            android:strokeColor="@color/navy"
+                            android:text="Create Faculty Account"
+                            android:textColor="@color/navy"
+                            android:textSize="14sp"
+                            app:cornerRadius="10dp" />
+
+                    </LinearLayout>
+
+                </ViewFlipper>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- TROUBLE TEXT -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:text="Having trouble? "
+                android:textColor="#80FFFFFF"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvContactSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/dmsans_semibold"
+                android:text="Contact IT Support"
+                android:textColor="@color/gold"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- COPYRIGHT -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/dmsans_regular"
+            android:gravity="center"
+            android:letterSpacing="0.15"
+            android:text="© 2025 COLLEGE HELPDESK"
+            android:textColor="#40FFFFFF"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/bg_status_badge.xml -->
+<!-- Color is set programmatically in adapter based on status type -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#EBF0FD"/>
+    <corners android:radius="20dp"/>
+</shape>

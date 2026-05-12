@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_stat_white"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/dialogTicketId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dmsans_semibold"
+        android:text="#TK-1234"
+        android:textColor="#AAAAAA"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/dialogSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/playfairdisplay_bold"
+        android:text="Login Issue"
+        android:textColor="#1A2340"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="15dp"
+        android:background="#F0F0F0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Name"
+        android:textColor="#888880"
+        android:textSize="11sp"
+        android:fontFamily="@font/dmsans_semibold"/>
+
+    <TextView
+        android:id="@+id/dialogStudentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/dmsans_regular"
+        android:text="Bharat"
+        android:textColor="#1A2340"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="#888880"
+        android:textSize="11sp"
+        android:fontFamily="@font/dmsans_semibold"/>
+
+    <TextView
+        android:id="@+id/dialogDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/dmsans_regular"
+        android:text="I cannot access my dashboard..."
+        android:textColor="#1A2340"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Status"
+        android:textColor="#888880"
+        android:textSize="11sp"
+        android:fontFamily="@font/dmsans_semibold"/>
+
+    <TextView
+        android:id="@+id/dialogStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/dmsans_semibold"
+        android:text="NOT OPEN"
+        android:textColor="#E53935"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F0F2F5"
+            android:fontFamily="@font/dmsans_semibold"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:textColor="#1A2340"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnOpenTicket"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1.5"
+            android:backgroundTint="#1A2340"
+            android:fontFamily="@font/dmsans_semibold"
+            android:text="Open Ticket"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

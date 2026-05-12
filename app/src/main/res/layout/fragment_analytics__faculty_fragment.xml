@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F5F3EE"
+    android:orientation="vertical">
+
+    <!-- ===== TOP BAR ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F0F2F5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="18dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_chart"
+            app:tint="#1A2340" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/playfairdisplay_bold"
+            android:text="Analytics"
+            android:textColor="#1A2340"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F0F2F5"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- ===== DATE RANGE PICKER ===== -->
+            <LinearLayout
+                android:id="@+id/btnDateRange"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_stat_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="#555555" />
+
+                <TextView
+                    android:id="@+id/tvDateRange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dmsans_regular"
+                    android:text="All Time Data"
+                    android:textColor="#1A2340"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&#8964;"
+                    android:textColor="#888880"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- Stats Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_stat_white"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:fontFamily="@font/dmsans_semibold" android:letterSpacing="0.06" android:text="TOTAL TICKETS" android:textColor="#AAAAAA" android:textSize="9sp" />
+                    <TextView android:id="@+id/tvTotalTickets" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/playfairdisplay_bold" android:text="0" android:textColor="#1A2340" android:textSize="22sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_stat_white"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:fontFamily="@font/dmsans_semibold" android:letterSpacing="0.06" android:text="RESOLVED" android:textColor="#AAAAAA" android:textSize="9sp" />
+                    <TextView android:id="@+id/tvResolvedCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/playfairdisplay_bold" android:text="0" android:textColor="#1A2340" android:textSize="22sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_stat_white"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:fontFamily="@font/dmsans_semibold" android:letterSpacing="0.06" android:text="MY RANK" android:textColor="#AAAAAA" android:textSize="9sp" />
+                    <TextView android:id="@+id/tvMyRank" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/playfairdisplay_bold" android:text="--" android:textColor="#1A2340" android:textSize="22sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Donut Chart Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_stat_white"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/playfairdisplay_bold"
+                    android:text="Your Performance Status"
+                    android:textColor="#1A2340" android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- Donut Chart with Center Text -->
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp">
+                        <com.example.myapplication.DonutChartView
+                            android:id="@+id/donutChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tvChartCenterLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dmsans_semibold"
+                                android:text="ACTIVE"
+                                android:textColor="#AAAAAA"
+                                android:textSize="10sp"
+                                android:textAllCaps="true"/>
+                            <TextView
+                                android:id="@+id/tvChartCenterPercent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/playfairdisplay_bold"
+                                android:text="0%"
+                                android:textColor="#1A2340"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/btnLegendActive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <View android:layout_width="12dp" android:layout_height="12dp" android:layout_marginEnd="10dp" android:background="@drawable/bg_legend_mid" />
+                            <TextView android:id="@+id/tvMyActiveTickets" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/dmsans_regular" android:text="Active (0)" android:textColor="#1A2340" android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btnLegendResolved"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <View android:layout_width="12dp" android:layout_height="12dp" android:layout_marginEnd="10dp" android:background="@drawable/bg_legend_light" />
+                            <TextView android:id="@+id/tvMyResolvedTickets" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/dmsans_regular" android:text="Resolved (0)" android:textColor="#1A2340" android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Categories -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_stat_white"
+                android:orientation="vertical"
+                android:padding="18dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18dp" android:fontFamily="@font/playfairdisplay_bold" android:text="Tickets by Category" android:textColor="#1A2340" android:textSize="18sp" />
+                <LinearLayout android:id="@+id/categoryContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- Top Staff -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_stat_white"
+                android:orientation="vertical"
+                android:padding="18dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="18dp" android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/playfairdisplay_bold" android:text="Top Staff" android:textColor="#1A2340" android:textSize="18sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/dmsans_semibold" android:letterSpacing="0.08" android:text="RESOLUTIONS" android:textColor="#AAAAAA" android:textSize="11sp" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/topStaffContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
